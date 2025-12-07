@@ -103,12 +103,19 @@ export default function Home() {
           <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
             {/* Using a high-quality tech/team GIF/Video placeholder */}
             <div className="absolute inset-0 bg-gray-900">
-               <Image
-                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1600&q=80"
-                alt="Digital Strategy Meeting"
-                fill
-                className="object-cover opacity-80"
-              />
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover opacity-60"
+                poster="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1600&q=80"
+              >
+                {/* Placeholder video URL - user can replace this with a local file in /public/videos/ */}
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-team-of-people-working-on-a-project-in-a-modern-office-4712-large.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               
               <div className="absolute bottom-0 left-0 p-10 md:p-16 text-white">
