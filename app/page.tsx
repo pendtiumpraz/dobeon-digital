@@ -103,13 +103,14 @@ export default function Home() {
           <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
             <div className="absolute inset-0 bg-gray-900">
               <video
+                key="intro-video"
                 autoPlay
                 loop
                 muted
                 playsInline
                 className="w-full h-full object-cover opacity-60"
               >
-                <source src="/videos/intro.mp4" type="video/mp4" />
+                <source src="/intro.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               
