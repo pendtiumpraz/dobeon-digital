@@ -11,7 +11,7 @@ export default function About() {
   const capabilities = [
     {
       title: 'End-to-end Orchestrator Solution',
-      description: "Your holistic partner for digital evolution. We orchestrate the entire value chain: from Strategic Advisory and Custom App Development to Data & AI integration, Cloud Infrastructure, and ongoing Managed Services. We ensure every layer of your technology stack works in harmony to drive business growth.",
+      description: "Combining strategy, innovation, and digital transformation to prepare your organization for tomorrow's challenges. We manage the entire lifecycle of your digital evolution.",
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
@@ -28,7 +28,7 @@ export default function About() {
       )
     },
     {
-      title: 'Product Opportunity Analysis',
+      title: 'Market Validation',
       description: 'Uncovering hidden revenue streams and market gaps. We analyze user behavior and market data to validate product concepts before substantial investment.',
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -37,7 +37,7 @@ export default function About() {
       )
     },
     {
-      title: 'Technical Roadmapping',
+      title: 'Strategy Advisory',
       description: 'Structuring your path to digital maturity. We design comprehensive technical roadmaps that align your IT infrastructure with long-term business objectives.',
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,7 +46,7 @@ export default function About() {
       )
     },
     {
-      title: 'Investment-Ready Technology',
+      title: 'Fundraising Advisory',
       description: 'Building assets that attract funding. We ensure your technology stack and intellectual property are robust, scalable, and due-diligence ready for investors.',
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -55,7 +55,7 @@ export default function About() {
       )
     },
     {
-      title: 'Executive Tech Support',
+      title: 'CEO - Office',
       description: 'Your technical office of the CEO. We act as the bridge between C-level strategy and engineering reality, ensuring seamless communication and execution.',
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">

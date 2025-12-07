@@ -42,13 +42,51 @@ export default function Home() {
     <>
       <StructuredData data={organizationSchema} />
       
+      {/* Video/Slider Placeholder Section - "Sketches of people and technology" */}
+      <Section className="bg-gray-50 overflow-hidden pt-0 md:pt-0 pb-0 md:pb-0">
+        <div className="w-full">
+          <div className="relative aspect-video md:aspect-[21/9] overflow-hidden">
+            <div className="absolute inset-0 bg-gray-900">
+              <video
+                key="intro-video"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover opacity-60"
+              >
+                <source src="/intro.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              
+              <div className="absolute bottom-0 left-0 p-10 md:p-16 text-white pointer-events-none">
+                <p className="text-sm font-semibold uppercase tracking-wider mb-4 text-primary-light">Innovation</p>
+                <h3 className="font-serif text-3xl md:text-5xl mb-6 max-w-2xl">
+                  Where creativity meets engineering excellence.
+                </h3>
+                <Link href="/about" className="inline-flex items-center gap-2 text-lg hover:text-primary-light transition-colors border-b border-white/30 pb-1 hover:border-primary-light pointer-events-auto">
+                  Discover our culture
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* Minimal Hero */}
       <Hero
         subtitle="Digital Product Studio"
         title="We help businesses. We believe in digital."
         description="We are a boutique digital product studio for growth-stage companies. We are your partner in building great digital products."
-        ctaText="Start Your Project"
-        ctaLink="/contact"
+        ctaText=""
+        ctaLink=""
+        secondaryCtaText=""
+        secondaryCtaLink=""
         gradient={true}
       />
 
@@ -96,42 +134,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Video/Slider Placeholder Section - "Sketches of people and technology" */}
-      <Section className="bg-gray-50 overflow-hidden">
-        <div className="max-w-6xl mx-auto">
-          <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
-            <div className="absolute inset-0 bg-gray-900">
-              <video
-                key="intro-video"
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover opacity-60"
-              >
-                <source src="/intro.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-              
-              <div className="absolute bottom-0 left-0 p-10 md:p-16 text-white pointer-events-none">
-                <p className="text-sm font-semibold uppercase tracking-wider mb-4 text-primary-light">Innovation</p>
-                <h3 className="font-serif text-3xl md:text-5xl mb-6 max-w-2xl">
-                  Where creativity meets engineering excellence.
-                </h3>
-                <Link href="/about" className="inline-flex items-center gap-2 text-lg hover:text-primary-light transition-colors border-b border-white/30 pb-1 hover:border-primary-light pointer-events-auto">
-                  Discover our culture
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                  </svg>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Section>
     </>
   );
 }

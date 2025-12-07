@@ -2,6 +2,7 @@
 
 import { ReactNode } from 'react';
 import { useInView, getAnimationClasses } from '@/lib/animations';
+import Image from 'next/image';
 
 interface CardProps {
   title: string;
@@ -52,8 +53,20 @@ export default function Card({
       `}
       style={{ transitionDelay: `${delay}ms` }}
     >
+      {image && (
+        <div className="relative w-full h-48 mb-4 overflow-hidden">
+          <Image 
+            src={image} 
+            alt={title} 
+            fill 
+            className="object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        </div>
+      )}
+
       {/* Background Pattern for gradient cards */}
-      {isGradient && (
+      {isGradient && !image && (
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-40 h-40 bg-white rounded-full -translate-y-1/2 translate-x-1/2"></div>
           <div className="absolute bottom-0 left-0 w-32 h-32 bg-white rounded-full translate-y-1/2 -translate-x-1/2"></div>
@@ -64,8 +77,8 @@ export default function Card({
         </div>
       )}
 
-      <div className="relative p-6 md:p-8">
-        {icon && (
+      <div className={`relative ${image ? 'p-6' : 'p-6 md:p-8'}`}>
+        {icon && !image && (
           <div className={`mb-5 inline-flex items-center justify-center w-14 h-14 rounded-xl transition-all duration-300 ${
             hover ? 'group-hover:scale-110 group-hover:rotate-3' : ''
           } ${
@@ -80,13 +93,13 @@ export default function Card({
         )}
         
         <h3 className={`font-serif text-2xl md:text-3xl font-normal transition-colors ${description ? 'mb-4' : ''} ${
-          isGradient ? 'text-white' : 'text-gray-900 group-hover:text-primary'
+          isGradient || image ? 'text-white' : 'text-gray-900 group-hover:text-primary'
         }`}>
           {title}
         </h3>
         
         {description && (
-          <p className={`font-sans font-light leading-relaxed text-base ${isGradient ? 'text-white/90' : 'text-gray-600'}`}>
+          <p className={`font-sans font-light leading-relaxed text-base ${isGradient || image ? 'text-white/90' : 'text-gray-600'}`}>
             {description}
           </p>
         )}
@@ -94,7 +107,7 @@ export default function Card({
         {/* Arrow indicator on hover */}
         {hover && (
           <div className={`mt-6 flex items-center gap-2 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-2 ${
-            isGradient ? 'text-white' : 'text-primary'
+            isGradient || image ? 'text-white' : 'text-primary'
           }`}>
             <span>Learn more</span>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -105,7 +118,7 @@ export default function Card({
       </div>
 
       {/* Shine effect on hover */}
-      {hover && (
+      {hover && !image && (
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
         </div>
