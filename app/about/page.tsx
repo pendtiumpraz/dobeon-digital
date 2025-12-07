@@ -82,7 +82,8 @@ export default function About() {
         description="We are a team of digital innovators committed to building the future of business through technology."
         ctaText="Our Credentials"
         ctaLink="/credentials"
-        gradient={false}
+        gradient={true}
+        backgroundImage="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1920&q=80"
       />
 
       <Section
