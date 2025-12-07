@@ -52,7 +52,7 @@ export default function Hero({
             />
           </div>
           {/* Gradient Overlay - Tech Purple/Blue theme */}
-          <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/95 via-primary/90 to-cyan-600/85"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0b2870]/95 via-[#113CA4]/90 to-[#4a72d4]/85"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
         </>
       )}
@@ -62,8 +62,8 @@ export default function Hero({
 
       {/* Decorative Elements - Code/Tech themed */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-cyan-400 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-purple-400 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#4a72d4] rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-[#113CA4] rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
 
       {/* Code pattern overlay */}
@@ -83,7 +83,7 @@ export default function Hero({
                 mounted ? 'animate-slide-down' : ''
               } ${gradient ? 'bg-white/20 backdrop-blur-sm border border-white/30' : 'bg-primary/10 border border-primary/20'}`}
             >
-              <span className={`w-2 h-2 rounded-full animate-pulse ${gradient ? 'bg-cyan-300' : 'bg-primary'}`}></span>
+              <span className={`w-2 h-2 rounded-full animate-pulse ${gradient ? 'bg-[#4a72d4]' : 'bg-primary'}`}></span>
               <span className={`text-sm font-semibold uppercase tracking-wider ${gradient ? 'text-white' : 'text-primary'}`}>
                 {subtitle}
               </span>

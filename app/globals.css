@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fffaf4;
+  --foreground: #343450;
 
   /* Primary Colors - ONLY USE THESE */
-  --primary: #0066ff;
-  --primary-dark: #0052cc;
-  --primary-light: #3385ff;
+  --primary: #113CA4;
+  --primary-dark: #0b2870;
+  --primary-light: #4a72d4;
 
   /* Grayscale */
   --gray-50: #f8f9fa;
@@ -32,9 +32,9 @@
   --font-mono: var(--font-geist-mono);
 
   /* Custom brand colors */
-  --color-brand-blue: #0066ff;
-  --color-brand-blue-dark: #0052cc;
-  --color-brand-blue-light: #3385ff;
+  --color-brand-blue: #113CA4;
+  --color-brand-blue-dark: #0b2870;
+  --color-brand-blue-light: #4a72d4;
 }
 
 html {
@@ -61,21 +61,21 @@ body {
 
 /* Gradient utilities - Simplified to blue only */
 .gradient-primary {
-  background: linear-gradient(135deg, #0066ff 0%, #3385ff 100%);
+  background: linear-gradient(135deg, #113CA4 0%, #4a72d4 100%);
 }
 
 .gradient-blue {
-  background: linear-gradient(135deg, #0066ff 0%, #0052cc 100%);
+  background: linear-gradient(135deg, #113CA4 0%, #0b2870 100%);
 }
 
 .gradient-hero {
-  background: linear-gradient(135deg, #0052cc 0%, #0066ff 50%, #3385ff 100%);
+  background: linear-gradient(135deg, #0b2870 0%, #113CA4 50%, #4a72d4 100%);
   animation: gradientShift 8s ease infinite;
   background-size: 200% 200%;
 }
 
 .gradient-subtle {
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  background: linear-gradient(135deg, #f8f9fa 0%, #fffaf4 100%);
 }
 
 /* Glassmorphism */
@@ -421,7 +421,7 @@ body {
   inset: 0;
   border-radius: inherit;
   padding: 2px;
-  background: linear-gradient(45deg, #0066ff, #3385ff);
+  background: linear-gradient(45deg, #113CA4, #4a72d4);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -539,7 +539,7 @@ body {
 
 /* Animated Text Gradients - Simplified to blue only */
 .text-gradient-blue {
-  background: linear-gradient(135deg, #0066ff 0%, #3385ff 100%);
+  background: linear-gradient(135deg, #113CA4 0%, #4a72d4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -548,8 +548,8 @@ body {
 /* Border Gradients - Simplified to blue only */
 .border-gradient-blue {
   border: 2px solid transparent;
-  background: linear-gradient(white, white) padding-box,
-              linear-gradient(135deg, #0066ff, #3385ff) border-box;
+  background: linear-gradient(#fffaf4, #fffaf4) padding-box,
+              linear-gradient(135deg, #113CA4, #4a72d4) border-box;
 }
 
 /* Magnetic Effect */
@@ -559,13 +559,13 @@ body {
 
 /* Glow Effects - Simplified to blue only */
 .glow-blue {
-  box-shadow: 0 0 20px rgba(0, 102, 255, 0.5);
+  box-shadow: 0 0 20px rgba(17, 60, 164, 0.5);
 }
 
 /* Card with gradient border on hover */
 .card-gradient-border {
   position: relative;
-  background: white;
+  background: #fffaf4;
   transition: all 0.3s ease;
 }
 
@@ -584,7 +584,7 @@ body {
 }
 
 .card-gradient-border:hover::before {
-  background: linear-gradient(135deg, #0066ff, #3385ff);
+  background: linear-gradient(135deg, #113CA4, #4a72d4);
   opacity: 1;
 }
 
@@ -601,7 +601,7 @@ body {
   left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, #0066ff, #3385ff);
+  background: linear-gradient(90deg, #113CA4, #4a72d4);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -655,12 +655,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #0066ff, #3385ff);
+  background: linear-gradient(135deg, #113CA4, #4a72d4);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #0052cc, #0066ff);
+  background: linear-gradient(135deg, #0b2870, #113CA4);
 }
 
 /* LogoLine Divider Styles */

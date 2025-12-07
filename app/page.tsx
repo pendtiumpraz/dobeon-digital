@@ -89,7 +89,7 @@ export default function Home() {
         className="relative"
       >
         {/* Floating decorative shapes - reduced and simplified */}
-        <FloatingShapes count={3} colors={['#0066ff', '#7C3AED', '#00D9FF']} />
+        <FloatingShapes count={3} colors={['#113CA4', '#4a72d4', '#0b2870']} />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
           {services.map((service, index) => (
@@ -111,7 +111,7 @@ export default function Home() {
       </Section>
 
       {/* Image Carousel Section */}
-      <Section className="bg-gray-50">
+      <Section className="">
         <ImageCarousel />
       </Section>
 
@@ -120,7 +120,7 @@ export default function Home() {
         subtitle="Industries We Serve"
         title="Solutions for Every Sector"
         description="We have experience building applications across diverse industries, delivering customized solutions that address unique business challenges."
-        className="bg-white"
+        className=""
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
@@ -141,9 +141,9 @@ export default function Home() {
         subtitle="Our Track Record"
         title="Delivering Excellence in Every Project"
         description="Numbers that reflect our commitment to quality and client satisfaction"
-        className="bg-gray-50"
+        className=""
       >
-        <FloatingShapes count={2} colors={['#0066ff', '#7C3AED']} />
+        <FloatingShapes count={2} colors={['#113CA4', '#4a72d4']} />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
           <StatCounter
@@ -190,7 +190,7 @@ export default function Home() {
         subtitle="Technology Stack"
         title="Built with Modern Technologies"
         description="We use cutting-edge frameworks and tools to deliver robust, scalable solutions."
-        className="bg-white"
+        className=""
       >
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
