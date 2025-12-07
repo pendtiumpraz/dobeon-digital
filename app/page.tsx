@@ -70,9 +70,9 @@ export default function Home() {
       <StructuredData data={organizationSchema} />
       {/* Hero Section */}
       <Hero
-        subtitle="Digital Solutions Partner"
-        title="Build Powerful Apps & Systems for Any Industry"
-        description="We develop custom web applications, mobile apps, enterprise systems, and AI-powered solutions. From startups to enterprises, we transform your ideas into reality."
+        subtitle="Digital Product Studio"
+        title="We help businesses. We believe in digital."
+        description="We are a boutique digital product studio for growth-stage companies. We are your partner in building great digital products."
         ctaText="Start Your Project"
         ctaLink="/contact"
         secondaryCtaText="Our Services"
@@ -83,22 +83,50 @@ export default function Home() {
       {/* Services Overview */}
       <Section
         id="services"
-        subtitle="What We Build"
-        title="Complete Digital Solutions"
-        description="From concept to deployment, we build scalable and modern applications tailored to your business needs across any industry."
+        subtitle="Services"
+        title="Digital Capabilities"
+        description="We collaborate with founders to propel their companies toward elevated performance levels by building scalable digital solutions."
         className="relative"
       >
         {/* Floating decorative shapes - reduced and simplified */}
         <FloatingShapes count={3} colors={['#113CA4', '#4a72d4', '#0b2870']} />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
-          {services.map((service, index) => (
+          {[
+            {
+              title: 'Product Discovery',
+              description: 'Discover growth opportunities and focus areas through rapid prototyping, user research, and market validation for your digital product ideas.',
+              icon: (
+                <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              ),
+            },
+            {
+              title: 'Digital Strategy',
+              description: 'We assist clients in achieving success by building scalable technology architectures and digital roadmaps that align with business goals.',
+              icon: (
+                <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+              ),
+            },
+            {
+              title: 'MVP Development',
+              description: 'We work with founders to build investable products (MVPs), analyze technical feasibility, and create compelling digital experiences to attract investors.',
+              icon: (
+                <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                </svg>
+              ),
+            },
+          ].map((service, index) => (
             <Card
               key={index}
               title={service.title}
               description={service.description}
               icon={service.icon}
-              gradient={index === 0 ? 'blue' : false}
+              gradient={index === 1 ? 'blue' : false}
               delay={index * 100}
             />
           ))}
@@ -112,24 +140,49 @@ export default function Home() {
 
       {/* Image Carousel Section */}
       <Section className="">
+        <div className="text-center mb-10">
+          <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-3">Our Work</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Featured Projects</h2>
+        </div>
         <ImageCarousel />
       </Section>
 
       {/* Value Proposition */}
       <Section
-        subtitle="Industries We Serve"
-        title="Solutions for Every Sector"
-        description="We have experience building applications across diverse industries, delivering customized solutions that address unique business challenges."
+        subtitle="See what we are interested in."
+        title="Explore More"
+        description=""
         className=""
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => (
+          {[
+            {
+              title: 'Portfolio',
+              description: 'Explore our case studies and digital products.',
+              link: '/about'
+            },
+            {
+              title: 'Services',
+              description: 'Deep dive into our engineering and design capabilities.',
+              link: '/services'
+            },
+            {
+              title: 'Careers',
+              description: 'Join our team of builders and innovators.',
+              link: '/contact'
+            },
+            {
+              title: 'Team',
+              description: 'Meet the people behind Dobeon Digital.',
+              link: '/about'
+            },
+          ].map((feature, index) => (
             <Card
               key={index}
               title={feature.title}
               description={feature.description}
               hover={true}
-              className="bg-white border-gray-200 hover:border-primary"
+              className="bg-white border-gray-200 hover:border-primary min-h-[200px] flex flex-col justify-center"
               delay={index * 100}
             />
           ))}

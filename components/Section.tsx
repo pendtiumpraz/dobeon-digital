@@ -43,7 +43,7 @@ export default function Section({
               </p>
             )}
             {title && (
-              <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${
+              <h2 className={`font-serif text-3xl md:text-4xl lg:text-5xl font-normal mb-4 ${
                 dark ? 'text-white' : 'text-gray-900'
               } ${getAnimationClasses('fadeIn', isInView)}`}
               style={{ transitionDelay: '100ms' }}>
@@ -51,7 +51,7 @@ export default function Section({
               </h2>
             )}
             {description && (
-              <p className={`text-lg ${
+              <p className={`font-sans font-light text-lg ${
                 dark ? 'text-gray-300' : 'text-gray-600'
               } ${getAnimationClasses('fadeIn', isInView)}`}
               style={{ transitionDelay: '200ms' }}>

@@ -79,14 +79,14 @@ export default function Card({
           </div>
         )}
         
-        <h3 className={`text-xl md:text-2xl font-bold transition-colors ${description ? 'mb-3' : ''} ${
+        <h3 className={`font-serif text-2xl md:text-3xl font-normal transition-colors ${description ? 'mb-4' : ''} ${
           isGradient ? 'text-white' : 'text-gray-900 group-hover:text-primary'
         }`}>
           {title}
         </h3>
         
         {description && (
-          <p className={`leading-relaxed text-base ${isGradient ? 'text-white/90' : 'text-gray-600'}`}>
+          <p className={`font-sans font-light leading-relaxed text-base ${isGradient ? 'text-white/90' : 'text-gray-600'}`}>
             {description}
           </p>
         )}

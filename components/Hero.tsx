@@ -91,7 +91,7 @@ export default function Hero({
           )}
 
           <h1
-            className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight opacity-0 ${
+            className={`font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal mb-8 leading-tight opacity-0 ${
               mounted ? 'animate-fade-in-up stagger-1' : ''
             } ${gradient ? 'text-white drop-shadow-lg' : 'text-gray-900'}`}
           >
@@ -99,9 +99,9 @@ export default function Hero({
           </h1>
 
           <p
-            className={`text-lg md:text-xl lg:text-2xl mb-10 leading-relaxed max-w-3xl mx-auto opacity-0 ${
+            className={`font-sans font-light text-lg md:text-xl lg:text-2xl mb-12 leading-relaxed max-w-2xl mx-auto opacity-0 ${
               mounted ? 'animate-fade-in-up stagger-2' : ''
-            } ${gradient ? 'text-white/95' : 'text-gray-600'}`}
+            } ${gradient ? 'text-white/90' : 'text-gray-600'}`}
           >
             {description}
           </p>
