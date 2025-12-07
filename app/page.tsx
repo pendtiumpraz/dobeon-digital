@@ -101,29 +101,23 @@ export default function Home() {
       <Section className="bg-gray-50 overflow-hidden">
         <div className="max-w-6xl mx-auto">
           <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
-            {/* Using a high-quality tech/team GIF/Video placeholder */}
             <div className="absolute inset-0 bg-gray-900">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover opacity-60"
-                poster="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1600&q=80"
-              >
-                {/* Placeholder video URL - user can replace this with a local file in /public/videos/ */}
-                <source src="/videos/demo.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              <iframe
+                className="absolute inset-0 w-full h-full object-cover scale-150 pointer-events-none"
+                src="https://www.youtube.com/embed/MLp8kG3e8lw?autoplay=1&mute=1&controls=0&loop=1&playlist=MLp8kG3e8lw&showinfo=0&rel=0&iv_load_policy=3&disablekb=1"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                title="Technology Background Video"
+              />
               
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
               
-              <div className="absolute bottom-0 left-0 p-10 md:p-16 text-white">
+              <div className="absolute bottom-0 left-0 p-10 md:p-16 text-white pointer-events-none">
                 <p className="text-sm font-semibold uppercase tracking-wider mb-4 text-primary-light">Innovation</p>
                 <h3 className="font-serif text-3xl md:text-5xl mb-6 max-w-2xl">
                   Where creativity meets engineering excellence.
                 </h3>
-                <Link href="/about" className="inline-flex items-center gap-2 text-lg hover:text-primary-light transition-colors border-b border-white/30 pb-1 hover:border-primary-light">
+                <Link href="/about" className="inline-flex items-center gap-2 text-lg hover:text-primary-light transition-colors border-b border-white/30 pb-1 hover:border-primary-light pointer-events-auto">
                   Discover our culture
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
