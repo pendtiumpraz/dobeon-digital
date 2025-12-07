@@ -112,7 +112,7 @@ export default function Home() {
                 poster="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1600&q=80"
               >
                 {/* Placeholder video URL - user can replace this with a local file in /public/videos/ */}
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-team-of-people-working-on-a-project-in-a-modern-office-4712-large.mp4" type="video/mp4" />
+                <source src="/videos/demo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               
