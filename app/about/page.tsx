@@ -69,7 +69,8 @@ export default function About() {
     name: 'Soleh Ayubi',
     role: 'Co-founder',
     image: '/photo/Soleh Ayubi.png',
-    bio: 'Visionary leader with deep expertise in digital transformation and enterprise solutions.'
+    bio: 'Visionary leader with deep expertise in digital transformation and enterprise solutions.',
+    expertise: ['Digital Transformation', 'Enterprise Architecture', 'AI Strategy']
   });
 
   return (
@@ -118,6 +119,7 @@ export default function About() {
               role={member.role}
               image={member.image}
               bio={member.bio}
+              expertise={member.expertise}
               delay={index * 100}
             />
           ))}
