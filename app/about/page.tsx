@@ -11,7 +11,7 @@ export default function About() {
   const capabilities = [
     {
       title: 'End-to-end Orchestrator Solution',
-      description: "Combining strategy, innovation, and digital transformation to prepare your organization for tomorrow's challenges. We manage the entire lifecycle of your digital evolution.",
+      description: "Your holistic partner for digital evolution. We orchestrate the entire value chain: from Strategic Advisory and Custom App Development to Data & AI integration, Cloud Infrastructure, and ongoing Managed Services. We ensure every layer of your technology stack works in harmony to drive business growth.",
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
