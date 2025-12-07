@@ -144,8 +144,8 @@ export default function Hero({
             )}
           </div>
 
-          {/* Tech Stack Badges */}
-          {gradient && (
+          {/* Tech Stack Badges - Disabled by default unless showTechStack is true */}
+          {gradient && false && (
             <div className={`mt-16 opacity-0 ${mounted ? 'animate-fade-in-up stagger-4' : ''}`}>
               <p className="text-white/70 text-sm mb-4">Built with modern technologies</p>
               <div className="flex flex-wrap justify-center items-center gap-4">
