@@ -37,7 +37,7 @@ export default function Hero({
 
   return (
     <section className={`relative overflow-hidden min-h-[90vh] flex items-center ${gradient ? '' : 'bg-gray-50'} pt-24 pb-20 md:pt-32 md:pb-32`}>
-      {/* Background Image */}
+      {/* Background Image - Only show if no video is provided or if video loading is not handled here yet */}
       {gradient && (
         <>
           <div className="absolute inset-0">

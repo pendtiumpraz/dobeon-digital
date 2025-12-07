@@ -47,7 +47,8 @@ export default function Credentials() {
         description="A showcase of our expertise in delivering transformative digital solutions across industries."
         ctaText="Partner With Us"
         ctaLink="/contact"
-        gradient={false}
+        gradient={true}
+        backgroundImage="https://images.unsplash.com/photo-1553877612-b37146b133d9?w=1920&q=80"
       />
 
       <Section
