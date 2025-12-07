@@ -201,7 +201,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
           <p className="text-gray-600 text-sm">
-            &copy; {currentYear} Dobeon Digital. All rights reserved.
+            &copy; {currentYear} PT Dobeon Solusi Digital. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm">
             <Link href="/privacy" className="text-gray-600 hover:text-primary transition-colors duration-200">

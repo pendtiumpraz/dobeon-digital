@@ -1,305 +1,129 @@
 'use client';
 
+import Link from 'next/link';
+import Image from 'next/image';
+import { useState } from 'react';
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
-import Card from '@/components/Card';
-import Button from '@/components/Button';
 import StructuredData from '@/components/StructuredData';
-import FloatingShapes from '@/components/FloatingShapes';
-import FloatingIcons from '@/components/FloatingIcons';
-import GlassCard from '@/components/GlassCard';
-import StatCounter from '@/components/StatCounter';
-import PlaceholderImage from '@/components/PlaceholderImage';
-import ImageCarousel from '@/components/ImageCarousel';
-import { organizationSchema} from '@/lib/structured-data';
-import { useInView, getAnimationClasses } from '@/lib/animations';
+import { organizationSchema } from '@/lib/structured-data';
 
 export default function Home() {
-  const { ref: ctaRef, isInView: ctaInView } = useInView();
-  const services = [
-    {
-      title: 'Web & Mobile Apps',
-      description: 'Full-stack web applications and native/cross-platform mobile apps built with modern frameworks like React, Next.js, Flutter, and React Native.',
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-        </svg>
-      ),
-    },
-    {
-      title: 'Enterprise Systems',
-      description: 'Custom ERP, CRM, HRM, and business management systems tailored to your organization needs. Scalable solutions for any industry.',
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-        </svg>
-      ),
-    },
-    {
-      title: 'AI-Powered Solutions',
-      description: 'Intelligent applications powered by Machine Learning, Computer Vision, NLP, and Generative AI. Transform your business with cutting-edge AI technology.',
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-        </svg>
-      ),
-    },
-  ];
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-  const features = [
+  const navItems = [
     {
-      title: 'Education & E-Learning',
-      description: 'LMS platforms, virtual classrooms, online courses, and educational apps with interactive learning experiences.',
+      title: 'Credentials',
+      link: '/credentials',
+      image: 'https://images.unsplash.com/photo-1553877612-b37146b133d9?w=800&q=80', // High-tech architecture
+      subtitle: 'Our Works'
     },
     {
-      title: 'Healthcare & Medical',
-      description: 'Hospital management, telemedicine, clinic apps, medical records, and healthcare automation systems.',
+      title: 'Capabilities',
+      link: '/about',
+      image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80', // Team working on strategy
+      subtitle: 'What We Do'
     },
     {
-      title: 'Finance & Fintech',
-      description: 'Payment gateways, banking apps, trading platforms, accounting systems, and financial management solutions.',
+      title: 'People',
+      link: '/about#team',
+      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80', // Diverse team
+      subtitle: 'Leadership'
     },
     {
-      title: 'Retail & E-Commerce',
-      description: 'Online stores, marketplace platforms, POS systems, inventory management, and omnichannel retail solutions.',
-    },
+      title: 'Career',
+      link: '/contact',
+      image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80', // Collaboration
+      subtitle: 'Join Us'
+    }
   ];
 
   return (
     <>
       <StructuredData data={organizationSchema} />
-      {/* Hero Section */}
+      
+      {/* Minimal Hero */}
       <Hero
         subtitle="Digital Product Studio"
         title="We help businesses. We believe in digital."
         description="We are a boutique digital product studio for growth-stage companies. We are your partner in building great digital products."
         ctaText="Start Your Project"
         ctaLink="/contact"
-        secondaryCtaText="Our Services"
-        secondaryCtaLink="/services"
-        backgroundImage="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1920&q=80"
+        gradient={true}
       />
 
-      {/* Services Overview */}
-      <Section
-        id="services"
-        subtitle="Services"
-        title="Digital Capabilities"
-        description="We collaborate with founders to propel their companies toward elevated performance levels by building scalable digital solutions."
-        className="relative"
-      >
-        {/* Floating decorative shapes - reduced and simplified */}
-        <FloatingShapes count={3} colors={['#113CA4', '#4a72d4', '#0b2870']} />
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
-          {[
-            {
-              title: 'Product Discovery',
-              description: 'Discover growth opportunities and focus areas through rapid prototyping, user research, and market validation for your digital product ideas.',
-              icon: (
-                <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              ),
-            },
-            {
-              title: 'Digital Strategy',
-              description: 'We assist clients in achieving success by building scalable technology architectures and digital roadmaps that align with business goals.',
-              icon: (
-                <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
-              ),
-            },
-            {
-              title: 'MVP Development',
-              description: 'We work with founders to build investable products (MVPs), analyze technical feasibility, and create compelling digital experiences to attract investors.',
-              icon: (
-                <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                </svg>
-              ),
-            },
-          ].map((service, index) => (
-            <Card
-              key={index}
-              title={service.title}
-              description={service.description}
-              icon={service.icon}
-              gradient={index === 1 ? 'blue' : false}
-              delay={index * 100}
-            />
-          ))}
+      {/* Highlight Grid - Bavana Style */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            {navItems.map((item, index) => (
+              <Link 
+                href={item.link} 
+                key={index}
+                className="group relative block overflow-hidden rounded-2xl aspect-[4/3] md:aspect-[16/9]"
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-110">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500" />
+                </div>
+                
+                <div className="absolute inset-0 p-8 flex flex-col justify-between">
+                  <span className="text-white/80 text-sm uppercase tracking-widest font-medium translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                    {item.subtitle}
+                  </span>
+                  
+                  <div className="flex items-end justify-between">
+                    <h2 className="text-white font-serif text-4xl md:text-5xl font-normal">
+                      {item.title}
+                    </h2>
+                    
+                    <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center group-hover:bg-white group-hover:text-primary transition-all duration-300 text-white">
+                      <svg className="w-6 h-6 transform -rotate-45 group-hover:rotate-0 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
-        <div className="text-center mt-12 relative z-10">
-          <Button href="/services" size="lg">
-            Explore Our Services
-          </Button>
-        </div>
-      </Section>
+      </section>
 
-      {/* Image Carousel Section */}
-      <Section className="">
-        <div className="text-center mb-10">
-          <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-3">Our Work</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Featured Projects</h2>
-        </div>
-        <ImageCarousel />
-      </Section>
-
-      {/* Value Proposition */}
-      <Section
-        subtitle="See what we are interested in."
-        title="Explore More"
-        description=""
-        className=""
-      >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            {
-              title: 'Portfolio',
-              description: 'Explore our case studies and digital products.',
-              link: '/about'
-            },
-            {
-              title: 'Services',
-              description: 'Deep dive into our engineering and design capabilities.',
-              link: '/services'
-            },
-            {
-              title: 'Careers',
-              description: 'Join our team of builders and innovators.',
-              link: '/contact'
-            },
-            {
-              title: 'Team',
-              description: 'Meet the people behind Dobeon Digital.',
-              link: '/about'
-            },
-          ].map((feature, index) => (
-            <Card
-              key={index}
-              title={feature.title}
-              description={feature.description}
-              hover={true}
-              className="bg-white border-gray-200 hover:border-primary min-h-[200px] flex flex-col justify-center"
-              delay={index * 100}
-            />
-          ))}
-        </div>
-      </Section>
-
-      {/* Stats Section with Animated Counters */}
-      <Section
-        subtitle="Our Track Record"
-        title="Delivering Excellence in Every Project"
-        description="Numbers that reflect our commitment to quality and client satisfaction"
-        className=""
-      >
-        <FloatingShapes count={2} colors={['#113CA4', '#4a72d4']} />
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
-          <StatCounter
-            end={150}
-            suffix="+"
-            label="Projects Delivered"
-            description="Web apps, mobile apps, enterprise systems, and AI solutions across industries"
-            gradient="blue"
-            icon={
-              <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
-              </svg>
-            }
-          />
-          <StatCounter
-            end={25}
-            suffix="+"
-            label="Industries Served"
-            description="Education, Healthcare, Finance, Retail, Manufacturing, and more"
-            gradient="blue"
-            icon={
-              <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-              </svg>
-            }
-          />
-          <StatCounter
-            end={50}
-            suffix="+"
-            label="Happy Clients"
-            description="Startups, SMEs, and enterprises trusting us with their digital transformation"
-            gradient="blue"
-            icon={
-              <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-              </svg>
-            }
-          />
-        </div>
-      </Section>
-
-      {/* Tech Stack */}
-      <Section
-        subtitle="Technology Stack"
-        title="Built with Modern Technologies"
-        description="We use cutting-edge frameworks and tools to deliver robust, scalable solutions."
-        className=""
-      >
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { name: 'Next.js', label: 'Next.js' },
-            { name: 'React', label: 'React' },
-            { name: 'Flutter', label: 'Flutter' },
-            { name: 'Node.js', label: 'Node.js' },
-            { name: 'Python', label: 'Python' },
-            { name: 'TensorFlow', label: 'TensorFlow' },
-            { name: 'PostgreSQL', label: 'PostgreSQL' },
-            { name: 'AWS', label: 'AWS' },
-          ].map((tech, index) => (
-            <div
-              key={index}
-              className="bg-white border-2 border-gray-200 hover:border-primary rounded-xl min-h-[120px] flex items-center justify-center p-6 transition-all duration-300 hover:shadow-lg card-gradient-border animate-fade-in-up"
-              style={{ animationDelay: `${index * 75}ms` }}
-            >
-              <div className="w-full h-full flex items-center justify-center group">
-                <span className="text-xl font-bold text-gray-700 group-hover:text-primary transition-colors">
-                  {tech.label}
-                </span>
+      {/* Video/Slider Placeholder Section - "Sketches of people and technology" */}
+      <Section className="bg-gray-50 overflow-hidden">
+        <div className="max-w-6xl mx-auto">
+          <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
+            {/* Using a high-quality tech/team GIF/Video placeholder */}
+            <div className="absolute inset-0 bg-gray-900">
+               <Image
+                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1600&q=80"
+                alt="Digital Strategy Meeting"
+                fill
+                className="object-cover opacity-80"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              
+              <div className="absolute bottom-0 left-0 p-10 md:p-16 text-white">
+                <p className="text-sm font-semibold uppercase tracking-wider mb-4 text-primary-light">Innovation</p>
+                <h3 className="font-serif text-3xl md:text-5xl mb-6 max-w-2xl">
+                  Where creativity meets engineering excellence.
+                </h3>
+                <Link href="/about" className="inline-flex items-center gap-2 text-lg hover:text-primary-light transition-colors border-b border-white/30 pb-1 hover:border-primary-light">
+                  Discover our culture
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                  </svg>
+                </Link>
               </div>
             </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* CTA Section */}
-      <Section className="gradient-hero relative overflow-hidden">
-        {/* Elegant Floating Icons */}
-        <FloatingIcons count={10} />
-
-        {/* Simplified background decoration */}
-        <div className="absolute inset-0 opacity-15">
-          <div className="absolute top-1/4 right-1/4 w-[30rem] h-[30rem] bg-white rounded-full blur-3xl blob-shape"></div>
-        </div>
-
-        <div
-          ref={ctaRef as React.RefObject<HTMLDivElement>}
-          className="max-w-3xl mx-auto text-center text-white relative z-10"
-        >
-          <h2 className={`text-3xl md:text-5xl font-bold mb-6 ${getAnimationClasses('fadeIn', ctaInView)}`}>
-            Ready to Build Your Next Digital Solution?
-          </h2>
-          <p className={`text-xl md:text-2xl mb-10 text-white/95 ${getAnimationClasses('fadeIn', ctaInView)}`}
-             style={{ transitionDelay: '100ms' }}>
-            Let&apos;s discuss your project and turn your ideas into powerful applications.
-          </p>
-          <div className={`flex flex-col sm:flex-row gap-6 justify-center ${getAnimationClasses('slideUp', ctaInView)}`}
-               style={{ transitionDelay: '200ms' }}>
-            <Button href="/contact" variant="secondary" size="lg" className="shadow-2xl hover:shadow-white/50">
-              Start Your Project
-            </Button>
-            <Button href="/services" variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-primary shadow-xl">
-              View Our Services
-            </Button>
           </div>
         </div>
       </Section>
