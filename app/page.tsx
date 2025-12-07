@@ -15,7 +15,7 @@ export default function Home() {
     {
       title: 'Credentials',
       link: '/credentials',
-      image: 'https://images.unsplash.com/photo-1553877612-b37146b133d9?w=800&q=80', // High-tech architecture
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80', // Code/Monitor image from previous Hero
       subtitle: 'Our Works'
     },
     {

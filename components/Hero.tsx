@@ -109,21 +109,23 @@ export default function Hero({
           <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center opacity-0 ${
             mounted ? 'animate-fade-in-up stagger-3' : ''
           }`}>
-            <Link
-              href={ctaLink}
-              className={`group px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105 hover:-translate-y-1 relative overflow-hidden ${
-                gradient
-                  ? 'bg-white text-primary hover:bg-gray-50'
-                  : 'bg-primary text-white hover:bg-primary-dark'
-              }`}
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                {ctaText}
-                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                </svg>
-              </span>
-            </Link>
+            {ctaText && ctaLink && (
+              <Link
+                href={ctaLink}
+                className={`group px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105 hover:-translate-y-1 relative overflow-hidden ${
+                  gradient
+                    ? 'bg-white text-primary hover:bg-gray-50'
+                    : 'bg-primary text-white hover:bg-primary-dark'
+                }`}
+              >
+                <span className="relative z-10 flex items-center gap-2">
+                  {ctaText}
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                  </svg>
+                </span>
+              </Link>
+            )}
 
             {secondaryCtaText && secondaryCtaLink && (
               <Link

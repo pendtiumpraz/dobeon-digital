@@ -14,8 +14,6 @@ export default function Contact() {
         subtitle="Get in Touch"
         title="Contact Us"
         description="Let's discuss how we can help transform your business."
-        ctaText=""
-        ctaLink=""
         gradient={true}
       />
 
