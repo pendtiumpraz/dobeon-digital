@@ -28,9 +28,9 @@ export const organizationSchema = {
   ],
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+1-555-123-4567',
+    telephone: '+6285731137373',
     contactType: 'Customer Service',
-    email: 'contact@dobeon.com',
+    email: 'hi@dobeon.com',
     availableLanguage: ['English', 'Indonesian'],
   },
   sameAs: [
