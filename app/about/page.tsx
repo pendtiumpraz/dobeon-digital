@@ -74,7 +74,15 @@ export default function About() {
     }
   ];
 
+
   const experts = [
+    {
+      name: 'Soleh Ayubi',
+      role: 'CEO & Founder',
+      image: '/photo/Soleh Ayubi.png',
+      bio: 'Visionary leader driving digital transformation and enterprise solutions. Building Companies of the Future through technology and innovation.',
+      expertise: ['Digital Transformation', 'Enterprise Architecture', 'Business Strategy']
+    },
     {
       name: 'Gajen Sunthara',
       role: 'Digital Transformation Advisor',
@@ -162,7 +170,7 @@ export default function About() {
         description="Supported by a network of industry experts who have led digital transformation across multiple organizations, we help businesses navigate change, modernize operations, and unlock new growth opportunities—turning strategy into execution, and innovation into results."
         className="bg-gray-50"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {experts.map((member, index) => (
             <TeamMemberCard
               key={index}
