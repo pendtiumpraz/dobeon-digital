@@ -78,7 +78,7 @@ export default function About() {
   const experts = [
     {
       name: 'Soleh Ayubi',
-      role: 'CEO & Founder',
+      role: 'Digital Transformation Expert',
       image: '/photo/Soleh Ayubi.png',
       bio: 'Visionary leader driving digital transformation and enterprise solutions. Building Companies of the Future through technology and innovation.',
       expertise: ['Digital Transformation', 'Enterprise Architecture', 'Business Strategy']
@@ -92,7 +92,7 @@ export default function About() {
     },
     {
       name: 'Ivan Sini',
-      role: 'Technology Strategist',
+      role: 'Business & Leadership Expert',
       image: '/photo/Ivan Sini 2.jpg',
       bio: 'Healthcare technology leader with deep expertise in building scalable digital health platforms.',
       expertise: ['Healthcare Technology', 'Digital Health', 'Platform Development']
