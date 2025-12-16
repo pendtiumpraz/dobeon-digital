@@ -62,8 +62,8 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-          ? 'bg-white/95 backdrop-blur-lg shadow-xl border-b border-gray-100'
-          : 'bg-white shadow-md'
+        ? 'bg-white/95 backdrop-blur-lg shadow-xl border-b border-gray-100'
+        : 'bg-white shadow-md'
         }`}
     >
       <nav className="container mx-auto px-4 sm:px-8 lg:px-12 max-w-7xl">
@@ -86,15 +86,6 @@ export default function Header() {
                 <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-gradient-to-r from-primary to-cyan-500 scale-x-0 transition-transform duration-300 group-hover:scale-x-100 origin-left"></span>
               </Link>
             ))}
-            <Link
-              href="/contact"
-              className="ml-4 px-7 py-3 bg-gradient-to-r from-primary to-blue-600 text-white rounded-xl hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300 font-semibold flex items-center gap-2 group"
-            >
-              Get Started
-              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -177,17 +168,6 @@ export default function Header() {
 
               {/* Bottom Section */}
               <div className="p-6 space-y-6 border-t border-gray-100">
-                <Link
-                  href="/contact"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="group flex items-center justify-center gap-2 w-full px-8 py-4 bg-gradient-to-r from-primary to-blue-600 text-white rounded-xl hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 font-semibold text-center hover:-translate-y-1"
-                >
-                  Get Started
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
-
                 {/* Social Icons */}
                 <div className="flex justify-center gap-3">
                   <a

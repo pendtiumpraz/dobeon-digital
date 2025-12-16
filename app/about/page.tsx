@@ -14,7 +14,16 @@ export default function About() {
       description: "Combining strategy, innovation, and digital transformation to prepare your organization for tomorrow's challenges. We manage the entire lifecycle of your digital evolution.",
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
+      )
+    },
+    {
+      title: 'AI-Powered Solutions',
+      description: 'Leveraging cutting-edge artificial intelligence and machine learning to automate processes, derive insights from data, and create intelligent systems that drive competitive advantage.',
+      icon: (
+        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
       )
     },
@@ -23,7 +32,7 @@ export default function About() {
       description: 'Helping scalable businesses navigate international markets. We provide the technological framework and strategic insights needed for global expansion and cross-border operations.',
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       )
     },
@@ -32,7 +41,7 @@ export default function About() {
       description: 'Uncovering hidden revenue streams and market gaps. We analyze user behavior and market data to validate product concepts before substantial investment.',
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
       )
     },
@@ -41,7 +50,7 @@ export default function About() {
       description: 'Structuring your path to digital maturity. We design comprehensive technical roadmaps that align your IT infrastructure with long-term business objectives.',
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
         </svg>
       )
     },
@@ -50,7 +59,7 @@ export default function About() {
       description: 'Building assets that attract funding. We ensure your technology stack and intellectual property are robust, scalable, and due-diligence ready for investors.',
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       )
     },
@@ -59,32 +68,73 @@ export default function About() {
       description: 'Your technical office of the CEO. We act as the bridge between C-level strategy and engineering reality, ensuring seamless communication and execution.',
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0z"/>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
       )
     }
   ];
 
-  const team = Array(4).fill({
-    name: 'Soleh Ayubi',
-    role: 'Co-founder',
-    image: '/photo/Soleh Ayubi.png',
-    bio: 'Visionary leader with deep expertise in digital transformation and enterprise solutions.',
-    expertise: ['Digital Transformation', 'Enterprise Architecture', 'AI Strategy']
-  });
+  const experts = [
+    {
+      name: 'Gajen Sunthara',
+      role: 'Digital Transformation Advisor',
+      image: '/photo/Gajen.png',
+      bio: 'Former Chief Digital Officer with extensive experience leading enterprise-wide digital transformation initiatives.',
+      expertise: ['Digital Transformation', 'Enterprise Strategy', 'Healthcare IT']
+    },
+    {
+      name: 'Ivan Sini',
+      role: 'Technology Strategist',
+      image: '/photo/Ivan Sini 2.jpg',
+      bio: 'Healthcare technology leader with deep expertise in building scalable digital health platforms.',
+      expertise: ['Healthcare Technology', 'Digital Health', 'Platform Development']
+    },
+    {
+      name: 'Kerrie Holley',
+      role: 'AI & Analytics Expert',
+      image: '/photo/Kerrie Holley.jpg',
+      bio: 'IBM Fellow and AI thought leader with decades of experience in artificial intelligence and data analytics.',
+      expertise: ['Artificial Intelligence', 'Data Analytics', 'Enterprise AI']
+    },
+    {
+      name: 'Paul Nielsen',
+      role: 'Enterprise Architecture Advisor',
+      image: '/photo/Paul Nielsen.jpg',
+      bio: 'Enterprise architect with proven track record in designing scalable, resilient digital systems.',
+      expertise: ['Enterprise Architecture', 'System Design', 'Cloud Strategy']
+    }
+  ];
 
   return (
     <>
       <StructuredData data={organizationSchema} />
       <Hero
         subtitle="Who We Are"
-        title="About Dobeon"
-        description="We are a team of digital innovators committed to building the future of business through technology."
+        title="About Dobeon Digital"
+        description="We are building a Company of the Future—one that goes beyond technology adoption to deliver real, measurable business value. Our focus is not only on developing digital solutions, but on ensuring they are successfully implemented, adopted, and scaled to drive sustainable impact."
         ctaText="Our Credentials"
         ctaLink="/credentials"
         gradient={true}
         backgroundImage="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1920&q=80"
       />
+
+      {/* Company of the Future Section */}
+      <Section
+        subtitle="Our Vision"
+        title="Company of the Future"
+        description="Delivering Real Business Values"
+      >
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-primary/5 to-blue-50 rounded-2xl p-8 md:p-12 border border-primary/10">
+            <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+              Our team brings deep hands-on experience in both <strong className="text-primary">system development</strong> and <strong className="text-primary">operational execution</strong>, enabling us to lead complex digital transformation and change management initiatives with confidence.
+            </p>
+            <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+              We understand that transformation is as much about <strong className="text-primary">people and processes</strong> as it is about technology.
+            </p>
+          </div>
+        </div>
+      </Section>
 
       <Section
         subtitle="What We Do"
@@ -108,12 +158,12 @@ export default function About() {
       <Section
         id="team"
         subtitle="Leadership"
-        title="Our Team"
-        description="Meet the minds behind Dobeon Digital."
+        title="Our Experts"
+        description="Supported by a network of industry experts who have led digital transformation across multiple organizations, we help businesses navigate change, modernize operations, and unlock new growth opportunities—turning strategy into execution, and innovation into results."
         className="bg-gray-50"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {team.map((member, index) => (
+          {experts.map((member, index) => (
             <TeamMemberCard
               key={index}
               name={member.name}

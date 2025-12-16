@@ -68,7 +68,7 @@ export default function Home() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 bg-white/20 backdrop-blur-sm border border-white/30 animate-slide-down">
               <span className="w-2 h-2 rounded-full animate-pulse bg-[#4a72d4]"></span>
               <span className="text-sm font-semibold uppercase tracking-wider text-white">
-                Digital Product Studio
+                Dobeon Digital
               </span>
             </div>
 
@@ -77,7 +77,7 @@ export default function Home() {
             </h1>
 
             <p className="font-sans font-light text-lg md:text-xl lg:text-2xl mb-12 leading-relaxed max-w-2xl mx-auto text-white/90 animate-fade-in-up stagger-2">
-              We are a boutique digital product studio for growth-stage companies. We are your partner in building great digital products.
+              Delivering real business value by enabling organizations to become Companies of the Future through end-to-end digital transformation.
             </p>
           </div>
         </div>
@@ -154,7 +154,7 @@ export default function Home() {
           </div>
 
           {/* Capabilities Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Card 1 - Dedicated Talent */}
             <div className="group relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
               <div className="relative h-56 overflow-hidden">
@@ -256,6 +256,40 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+
+            {/* Card 4 - AI Solutions */}
+            <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-600 to-indigo-700 shadow-lg hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-500 hover:-translate-y-2">
+              <div className="relative h-56 overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80"
+                  alt="AI Solutions"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/90 via-purple-800/50 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="w-14 h-14 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-white group-hover:text-purple-600 group-hover:scale-110 transition-all duration-300">
+                    <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="font-serif text-2xl font-normal text-white mb-3">
+                  AI-Powered Solutions
+                </h3>
+                <p className="font-sans font-light text-white/90 leading-relaxed mb-4">
+                  Leveraging cutting-edge artificial intelligence and machine learning to automate processes, derive insights, and create intelligent systems that drive competitive advantage.
+                </p>
+                <Link href="/credentials" className="inline-flex items-center gap-2 text-white font-medium group/link">
+                  Learn more
+                  <svg className="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
           </div>
 
           {/* CTA */}
@@ -272,6 +306,60 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Client Logos Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold uppercase tracking-wider mb-4">
+              Trusted Partners
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 mb-4">
+              Our Clients
+            </h2>
+            <p className="font-sans font-light text-lg text-gray-600 max-w-2xl mx-auto">
+              We are proud to partner with leading organizations across industries
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8">
+            {[
+              { src: '/partner/Danone.webp', alt: 'Danone' },
+              { src: '/partner/Frisian Flag.webp', alt: 'Frisian Flag' },
+              { src: '/partner/Kemenkeu.webp', alt: 'Kemenkeu' },
+              { src: '/partner/OJK.webp', alt: 'OJK' },
+              { src: '/partner/Mitsubishi Motor.webp', alt: 'Mitsubishi Motor' },
+              { src: '/partner/Kompas Gramedia.webp', alt: 'Kompas Gramedia' },
+              { src: '/partner/biofarma.webp', alt: 'Biofarma' },
+              { src: '/partner/Adira Finance.webp', alt: 'Adira Finance' },
+              { src: '/partner/Merck.webp', alt: 'Merck' },
+              { src: '/partner/Shipper.webp', alt: 'Shipper' },
+              { src: '/partner/anteraja.webp', alt: 'Anteraja' },
+              { src: '/partner/Jabar Digital Service.webp', alt: 'Jabar Digital Service' },
+              { src: '/partner/Kemnaker.webp', alt: 'Kemnaker' },
+              { src: '/partner/bkkbn.webp', alt: 'BKKBN' },
+              { src: '/partner/save the children.webp', alt: 'Save the Children' },
+              { src: '/partner/Bobobox.png', alt: 'Bobobox' },
+              { src: '/partner/Liputan6.png', alt: 'Liputan6' },
+              { src: '/partner/Qoin.png', alt: 'Qoin' },
+            ].map((client, index) => (
+              <div
+                key={index}
+                className="group bg-white rounded-xl p-4 md:p-6 flex items-center justify-center shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+              >
+                <Image
+                  src={client.src}
+                  alt={client.alt}
+                  width={120}
+                  height={60}
+                  className="object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300 max-h-12 w-auto"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }
+
