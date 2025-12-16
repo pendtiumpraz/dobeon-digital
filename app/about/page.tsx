@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import Card from '@/components/Card';
@@ -110,7 +111,46 @@ export default function About() {
       image: '/photo/Paul Nielsen.jpg',
       bio: 'Enterprise architect with proven track record in designing scalable, resilient digital systems.',
       expertise: ['Enterprise Architecture', 'System Design', 'Cloud Strategy']
+    },
+    {
+      name: 'John Brownstein',
+      role: 'Healthcare & Data Science Expert',
+      image: '/photo/John Brownstein.png',
+      bio: 'Chief Innovation Officer at Boston Children\'s Hospital with expertise in computational epidemiology and health informatics.',
+      expertise: ['Healthcare Innovation', 'Data Science', 'Epidemiology']
+    },
+    {
+      name: 'Sai Prasad',
+      role: 'Technology Leadership Expert',
+      image: '/photo/Sai Prasad.jpg',
+      bio: 'Technology executive with extensive experience in driving digital transformation across global enterprises.',
+      expertise: ['Technology Strategy', 'Digital Leadership', 'Enterprise Solutions']
+    },
+    {
+      name: 'Salman Subakat',
+      role: 'Business Innovation Expert',
+      image: '/photo/Salman Subakat.jpg',
+      bio: 'Entrepreneur and business leader with proven success in building innovative digital products and services.',
+      expertise: ['Business Innovation', 'Product Strategy', 'Entrepreneurship']
+    },
+    {
+      name: 'Seth Berkeley',
+      role: 'Global Health Expert',
+      image: '/photo/Seth Berkeley 2.jpeg',
+      bio: 'Former CEO of Gavi, the Vaccine Alliance with decades of experience leading global health initiatives.',
+      expertise: ['Global Health', 'Public Policy', 'International Development']
     }
+  ];
+
+  // Global organizations our experts have led
+  const globalOrganizations = [
+    { name: 'IBM', logo: '/logo/IBM_logo.svg.png' },
+    { name: 'Google', logo: '/logo/Google.webp' },
+    { name: 'Harvard', logo: '/logo/Harvard.png' },
+    { name: 'Boston Children\'s Hospital', logo: '/logo/Boston.png' },
+    { name: 'Deloitte', logo: '/logo/Deloitte.png' },
+    { name: 'Biofarma', logo: '/logo/Biofarma.png' },
+    { name: 'Novo Nordisk', logo: '/logo/Novo.png' },
   ];
 
   return (
@@ -170,7 +210,7 @@ export default function About() {
         description="Supported by a network of industry experts who have led digital transformation across multiple organizations, we help businesses navigate change, modernize operations, and unlock new growth opportunities—turning strategy into execution, and innovation into results."
         className="bg-gray-50"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
           {experts.map((member, index) => (
             <TeamMemberCard
               key={index}
@@ -184,6 +224,31 @@ export default function About() {
           ))}
         </div>
       </Section>
+
+      {/* Global Organizations Section */}
+      <Section
+        subtitle="Global Experience"
+        title="Organizations Our Experts Have Led"
+        description="Our experts bring decades of experience from leading global organizations across industries."
+      >
+        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+          {globalOrganizations.map((org, index) => (
+            <div
+              key={index}
+              className="group bg-white rounded-xl p-6 flex items-center justify-center shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+            >
+              <Image
+                src={org.logo}
+                alt={org.name}
+                width={120}
+                height={60}
+                className="object-contain opacity-60 group-hover:opacity-100 transition-opacity duration-300 max-h-12 w-auto"
+              />
+            </div>
+          ))}
+        </div>
+      </Section>
     </>
   );
 }
+

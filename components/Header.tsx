@@ -152,8 +152,7 @@ export default function Header() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className="group flex items-center gap-4 px-4 py-4 rounded-xl text-gray-800 hover:text-primary hover:bg-blue-50 font-medium text-lg transition-all duration-300 opacity-0 animate-slide-left hover:translate-x-2"
-                    style={{ animationDelay: `${index * 50}ms`, animationFillMode: 'forwards' }}
+                    className="group flex items-center gap-4 px-4 py-4 rounded-xl text-gray-800 hover:text-primary hover:bg-blue-50 font-medium text-lg transition-all duration-300 hover:translate-x-2"
                   >
                     <div className="flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-br from-blue-50 to-cyan-50 text-primary group-hover:from-primary group-hover:to-blue-600 group-hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg">
                       {link.icon}
